@@ -3,18 +3,32 @@
 
 <head>
   <title>Multi-layered Navbar</title>
+
+  
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>
+  <script src="user.js"></script>
+
+
+
   <script>
 
     function getJson(){
-        fetch("https://mega.nz/file/FlQDmACT#ADkglqbJq347dpAnXscZPHSUuI-wxLGHDwE8kGXpX3U").then(response => response.json()).then(data => console.log(data));
+        fetch("config.json").then(response => response.json()).then(data => console.log(data['hindi']));
     }
 
     function getYaml(){
-        fetch("https://www.dropbox.com/scl/fi/t9u3l54z6b3ij7qb8avj8/config.yaml?rlkey=pt7lxf4zgc29p8b24dedo7q6i&raw=1").then(res => res.blob()).then(blob => blob.text()).then(yamlAsString => {
+        fetch("config.yaml").then(res => res.blob()).then(blob => blob.text()).then(yamlAsString => {
+            console.log('yaml res:', yamlAsString)
+        }).catch(err => console.log('yaml err:', err));
+    }
+
+    function getYaml01(){
+        fetch("config.yaml").then(res => res.blob()).then(blob => blob.text()).then(yamlAsString => {
             console.log('yaml res:', yamlAsString)
         }).catch(err => console.log('yaml err:', err));
     }
@@ -56,6 +70,26 @@
   <button onclick="getJson();">Fetch Json</button>
 
   <button onclick="getYaml();">Fetch Yaml</button>
+
+  <!-- <script>
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const passwordInput = this.querySelector("input[type=password]");
+        crypto.subtle.digest("SHA-384", new TextEncoder().encode(passwordInput.value)).then(function (hashBuffer) {
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map((b) => b.toString(16).padStart(2, '0')).join('');
+            passwordInput.value = hashHex;
+            form.submit();
+        });
+    });
+</script> -->
+
+  <form>
+    <input type="password" id="pwd" name="password" />
+    <input type="submit">
+  </form>
+
   <div class="container">
     <h1>Content</h1>
     <p>This is the main content of the page.</p>

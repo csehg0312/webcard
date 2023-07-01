@@ -1,17 +1,227 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
-    <script src='main.js'></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <title>WebCard - Welcome to my site</title>
+
+  <!-- imports are happening here -->
+  <!-- bootstrap import -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- pyscript import here -->
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script> 
+
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#welcome">WebCard</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Skills</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#langs">Languages</a>
+            <a class="dropdown-item" href="#progs">Programming</a>
+            <a class="dropdown-item" href="#">xy</a>
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Projects</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">PyFileManager</a>
+              <a class="dropdown-item" href="#">Expense tracker</a>
+              <a class="dropdown-item" href="#">xy</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Connections</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#connects">Connections</a>
+              <a class="dropdown-item" href="#volunters">Volunteerings</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
     
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4"> 
+    <div class="row">
+      <div class="col-md-8">
+        <h1 id="welcome">Welcome to WebCard</h1>
+        <q>My quote can come here</q>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Contact Information </h5>
+            <p class="card-text">-----------------------------</p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Email: </strong> <a href="mailto:csehgabor450@gmail.com">csehgabor450@gmail.com</a></li>
+              <li class="list-group-item"><strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/dailywithhuncseh-gabor0312">Profile</a></li>
+              <li class="list-group-item"><strong>GitHub: </strong><a href="https://www.github.com/csehg0312">Profile</a></li>
+              <!-- <li class="list-group-item"><strong>Facebook: </strong></li> -->
+              <!-- <li class="list-group-item"><strong></strong></li>
+              <li class="list-group-item"><strong></strong></li> -->
+              <li class="list-group-item"><strong>Phone:</strong> +421 917 151 235</li>
+              <div class="container">
+                <div class="row">
+                    <div class="col-md text-end" >
+                        <img alt="Profile picture", src="https://www.dropbox.com/scl/fi/rqaba8rysdwg7cz4hgokb/prof.jpg?rlkey=ncfsstrmpx3hohr9qvl2g6513&raw=1", height="200vh">
+                    </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    
+  </div>
+  <hr>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 id="about">About</h1>
+            <div class="container mt-4">
+                
+                ...
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <h1 id="langs">Languages</h1>
+        
+    
+          Hungarian ---- A1 <progress value="6" max="6"></progress> C1
+          <p>C2 - Fluent</p>
+      
+        
+          Slovak ---- A1 <progress value="4" max="6"></progress> C1
+          <p>B2</p>
+      
+  
+          English ---- A1 <progress value="4" max="6"></progress> C1
+          <p>B2</p>
+      
+        
+          German ---- A1 <progress value="1" max="6"></progress> C1
+          <p>A1</p>
+        </div>
+        <div class="col-md-4">
+        <div class="card">
+          <h4 class="card-title">Curently learning on Duolingo</h4>
+          <div class="card-body">
+          
+            <p>Norwegian ---- 26 <progress value="26" max="159"></progress> from 159 lessons</p>
+          
+          
+            <p>Ukranian ----  7 <progress value="7" max="33"></progress> from 33 lessons</p>
+          
+          
+            <p>Hindi ---- 6 <progress value="6" max="21"></progress> from 21 lessons</p>
+            <div class="col-md-2">
+              <img src="https://www.dropbox.com/scl/fi/wptvve5lvjtqlbncqbrsf/7564363_duolingo_logo_brand_icon.png?rlkey=8qjzjdk1dj9cn1zw39loscg0n&raw=1" width="100vh">
+            </div>
+          </div>
+    </div>
+    </div>
+  </div>
+  </div>
+
+  <hr>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 id="progs">Programming Skills</h1>
+        </div>
+    </div>
+  </div>
+  
+  <hr>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 id="projs">Projects</h1>
+        </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 id="connects">Connections</h1>
+            <br>
+            <h3>JóMóD</h3> <img src="https://www.dropbox.com/scl/fi/ac07gvoe7ojypynwhjd7j/K-perny-k-p-2021-08-05-131244.jpg?rlkey=5sk5v691gschgbwp8b1u2u253&raw=1", width="100vh">
+            <h3>Diákhálózat</h3> <img src="https://www.dropbox.com/scl/fi/mmnfatjvle0ea2kotnhw8/dh2021_30yearsSpec.jpg?rlkey=6g8yhyvnv74kdexgghq2nb5x7&raw=1" , width="100vh">
+        </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 id="volunters">Volunteerings</h1>
+        </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 id="gallery">Gallery</h1>
+        </div>
+        <picture class="col-md-6"></picture>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container-fluid">
+    <form class="row">
+      <div class="container-fluid">
+        <p>In case of questions write an email: </p>
+        <label> Your email address: </label> <input id="in-mail", accept="ok", width="50px">
+      </div>
+      <div class="container-fluid">
+        <label> Your message comes here: </label><br><textarea aria-multiline="true", rows="15", onfocus="", title="Message"></textarea>
+      </div>
+
+    </form>
+  </div>
 </body>
+<div class="container-fluid">
+  <p>Text</p>
+</div>
 </html>
