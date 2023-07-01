@@ -7,6 +7,19 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+
+    function getJson(){
+        fetch("https://mega.nz/file/FlQDmACT#ADkglqbJq347dpAnXscZPHSUuI-wxLGHDwE8kGXpX3U").then(response => response.json()).then(data => console.log(data));
+    }
+
+    function getYaml(){
+        fetch("https://www.dropbox.com/scl/fi/t9u3l54z6b3ij7qb8avj8/config.yaml?rlkey=pt7lxf4zgc29p8b24dedo7q6i&raw=1").then(res => res.blob()).then(blob => blob.text()).then(yamlAsString => {
+            console.log('yaml res:', yamlAsString)
+        }).catch(err => console.log('yaml err:', err));
+    }
+
+  </script>
 </head>
 
 <body>
@@ -40,6 +53,9 @@
     </div>
   </nav>
 
+  <button onclick="getJson();">Fetch Json</button>
+
+  <button onclick="getYaml();">Fetch Yaml</button>
   <div class="container">
     <h1>Content</h1>
     <p>This is the main content of the page.</p>
