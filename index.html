@@ -14,8 +14,13 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
   <!-- pyscript import here -->
-  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-  <script defer src="https://pyscript.net/latest/pyscript.js"></script> 
+  <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>  -->
+
+  <!-- local defined javascript here -->
+  <script src="controls.js"></script>
+  <!-- local theme css file -->
+  <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -34,32 +39,45 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Skills</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#langs">Languages</a>
-            <a class="dropdown-item" href="#progs">Programming</a>
-            <a class="dropdown-item" href="#">xy</a>
-          </div>
+              <a class="dropdown-item" href="#langs">Languages</a>
+              <a class="dropdown-item" href="#progs">Programming</a>
+              <a class="dropdown-item" href="#">xy</a>
+            </div>
           </li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Projects</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">PyFileManager</a>
-              <a class="dropdown-item" href="#">Expense tracker</a>
+              <a class="dropdown-item" href="#pyfmanager">PyFileManager</a>
+              <a class="dropdown-item" href="#exptracker">Expense tracker</a>
               <a class="dropdown-item" href="#">xy</a>
-          </li>
+            </div>
+        </li>
 
-          <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Connections</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#connects">Connections</a>
+            <a class="dropdown-item" href="#volunters">Volunteerings</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">Connections</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#connects">Connections</a>
-              <a class="dropdown-item" href="#volunters">Volunteerings</a>
-          </li>
+            aria-haspopup="true" aria-expanded="false">Change language</a>
+            <div class="dropdown-menu", aria-labelledby="navbarDropdownMenuLink">
+              <button class="dropdown-item", onclick="changeToEN();">EN</button>
+              <button class="dropdown-item", onclick="changeToHU();">HU</button>
+              <button class="dropdown-item", onclick="changeToSK();">SK</button>
+              <button class="dropdown-item", onclick="changeToHI();">HI</button>
+            </div>
 
-          <li class="nav-item">
+        </li>
+
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#gallery">Gallery</a>
-          </li>
+          </li> -->
     
         </ul>
       </div>
@@ -101,13 +119,23 @@
     </div>
     
   </div>
-  <hr>
-  <div class="container-fluid">
+  <div class="container-fluid about_theme">
+    <hr>
     <div class="row">
         <div class="col-md-8">
             <h1 id="about">About</h1>
             <div class="container mt-4">
                 
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt ipsum vitae libero pretium, auctor accumsan urna imperdiet. Quisque purus sapien, vulputate a lectus non, vehicula dictum nunc. Sed ac ante sit amet libero lobortis blandit nec eu nisi. Pellentesque ornare mi quis nisl consequat, id pharetra arcu accumsan. Pellentesque cursus tortor nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam iaculis eros ac neque lacinia molestie. Curabitur iaculis lorem non fermentum posuere. Duis non purus eget velit hendrerit fringilla nec eu felis. Curabitur ullamcorper felis ut lacus sodales volutpat. Sed ut gravida diam, in efficitur sapien. Donec ac porta nibh.</p>
+
+              <p>Praesent sit amet sodales enim. Integer lobortis semper aliquam. Maecenas dui quam, porttitor id dapibus sit amet, blandit ut libero. Vestibulum pulvinar scelerisque ligula, sed dictum velit suscipit id. Sed ac cursus dui, vel sagittis neque. Mauris viverra dui diam, a eleifend elit fermentum congue. Sed posuere vehicula metus, vel auctor ipsum vestibulum in.</p>
+
+              <p>Suspendisse cursus molestie vulputate. Suspendisse bibendum turpis sed diam pellentesque, vel convallis magna dictum. Cras eget felis finibus, semper libero id, laoreet neque. Nam ultrices nulla id tortor rutrum finibus. Vestibulum blandit ante sed ullamcorper facilisis. Mauris interdum blandit orci vulputate fringilla. Vivamus pellentesque aliquam nulla vitae convallis.</p>
+
+              <p>Quisque mollis vitae est eget porttitor. Praesent ultricies sapien sed erat congue placerat. Curabitur rutrum diam eu mauris venenatis fermentum. Aenean eget auctor ex. Aliquam eu massa interdum, vehicula est et, bibendum neque. In hac habitasse platea dictumst. Ut cursus, quam ac consectetur aliquet, nulla justo pharetra sem, sit amet volutpat massa augue eu nisi. Nullam sit amet hendrerit massa, ut tristique diam.</p>
+
+              <p>Sed arcu orci, vehicula ac dictum sit amet, porttitor id tellus. Sed scelerisque in magna vel rhoncus. Donec porta lacinia magna. Curabitur interdum at orci sed pharetra. Aliquam auctor eleifend lorem eleifend iaculis. Mauris ullamcorper tempor dui, in facilisis libero sodales in. Fusce semper mi id ultricies euismod. Integer ut tortor posuere, tempor felis sed, auctor leo. Proin ornare felis justo, sed suscipit lorem volutpat in. Praesent tristique mattis lectus a eleifend. Aenean facilisis metus at risus sodales, non cursus magna fermentum. Vestibulum rutrum, lorem vel tincidunt faucibus, sapien turpis porta dolor, ut congue arcu lorem sed dolor. Donec ornare dolor sem, nec suscipit ex congue at. Sed in ligula metus. Vivamus tristique urna posuere, scelerisque quam vel, tempus dui. </p>
                 ...
             </div>
         </div>
@@ -115,23 +143,23 @@
   </div>
 
   <hr>
-  <div class="container mt-4">
+  <div class="container-fluid">
+    <h1 id="langs">Languages</h1>
     <div class="row">
-        <div class="col-md-4">
-            <h1 id="langs">Languages</h1>
+        <div class="col-md-6">
         
     
           Hungarian ---- A1 <progress value="6" max="6"></progress> C1
           <p>C2 - Fluent</p>
-      
+          <br>
         
           Slovak ---- A1 <progress value="4" max="6"></progress> C1
           <p>B2</p>
-      
+          <br>
   
           English ---- A1 <progress value="4" max="6"></progress> C1
           <p>B2</p>
-      
+          <br>
         
           German ---- A1 <progress value="1" max="6"></progress> C1
           <p>A1</p>
@@ -142,11 +170,11 @@
           <div class="card-body">
           
             <p>Norwegian ---- 26 <progress value="26" max="159"></progress> from 159 lessons</p>
-          
-          
+            <br>
+            
             <p>Ukranian ----  7 <progress value="7" max="33"></progress> from 33 lessons</p>
           
-          
+            <br>
             <p>Hindi ---- 6 <progress value="6" max="21"></progress> from 21 lessons</p>
             <div class="col-md-2">
               <img src="https://www.dropbox.com/scl/fi/wptvve5lvjtqlbncqbrsf/7564363_duolingo_logo_brand_icon.png?rlkey=8qjzjdk1dj9cn1zw39loscg0n&raw=1" width="100vh">
@@ -155,48 +183,81 @@
     </div>
     </div>
   </div>
+
+  <hr>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
+  
+  <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
   </div>
 
   <hr>
   <div class="container-fluid">
+    <h1 id="progs">Programming Skills</h1>
     <div class="row">
+      <h3></h3>
         <div class="col-md-8">
-            <h1 id="progs">Programming Skills</h1>
         </div>
     </div>
   </div>
   
   <hr>
   <div class="container-fluid">
+    <h1 id="projs">Projects</h1>
     <div class="row">
-        <div class="col-md-8">
-            <h1 id="projs">Projects</h1>
-        </div>
+      <div class="col-md-8">
+        <h3 id="pyfmanager">PyFileManager</h3>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
+
+          <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
+        <hr>
+        <h3 id="exptracker">Expense tracker</h3>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
+
+          <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
+      </div>
     </div>
   </div>
 
-  <hr>
   <div class="container-fluid">
+    <hr>
+    <h1 id="connects">Connections</h1>
     <div class="row">
         <div class="col-md-8">
-            <h1 id="connects">Connections</h1>
             <br>
-            <h3>JóMóD</h3> <img src="https://www.dropbox.com/scl/fi/ac07gvoe7ojypynwhjd7j/K-perny-k-p-2021-08-05-131244.jpg?rlkey=5sk5v691gschgbwp8b1u2u253&raw=1", width="100vh">
-            <h3>Diákhálózat</h3> <img src="https://www.dropbox.com/scl/fi/mmnfatjvle0ea2kotnhw8/dh2021_30yearsSpec.jpg?rlkey=6g8yhyvnv74kdexgghq2nb5x7&raw=1" , width="100vh">
+            <h3>JóMóD</h3>
+            <div class="container-fluid">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
+
+              <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
+              <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjomod.komarom%2Fposts%2Fpfbid0BpotyK5GeindoKGNyK9ybZy5oFWL4sVAtTyjEruBsA2DvjzJp9Cgs2A2BDz63FMZl&show_text=true&width=500" width="500" height="633" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+            <img src="https://www.dropbox.com/scl/fi/ac07gvoe7ojypynwhjd7j/K-perny-k-p-2021-08-05-131244.jpg?rlkey=5sk5v691gschgbwp8b1u2u253&raw=1", width="100vh">
+            <br>
+            <hr>
+            <h3>Diákhálózat</h3> 
+            <div class="container-fluid">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
+
+              <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
+              <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdiakhalozat%2Fposts%2Fpfbid0bsXpCpS8hGdpx7bwcdQdUBeee2mHXRbhj8QRCK3YuPWenH77P7DprYzyGRp4wmySl&show_text=true&width=500" width="500" height="701" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+            <img src="https://www.dropbox.com/scl/fi/mmnfatjvle0ea2kotnhw8/dh2021_30yearsSpec.jpg?rlkey=6g8yhyvnv74kdexgghq2nb5x7&raw=1" , width="100vh">
         </div>
     </div>
   </div>
 
   <hr>
   <div class="container-fluid">
+    <h1 id="volunters">Volunteerings</h1>
     <div class="row">
         <div class="col-md-8">
-            <h1 id="volunters">Volunteerings</h1>
         </div>
     </div>
   </div>
 
-  <hr>
+  <!-- <hr>
   <div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
@@ -204,11 +265,11 @@
         </div>
         <picture class="col-md-6"></picture>
     </div>
-  </div>
+  </div> -->
 
   <hr>
 
-  <div class="container-fluid">
+  <div class="container-fluid email_me_theme">
     <form class="row">
       <div class="container-fluid">
         <p>In case of questions write an email: </p>
@@ -221,7 +282,7 @@
     </form>
   </div>
 </body>
-<div class="container-fluid">
-  <p>Text</p>
+<div class="container-fluid social_board">
+  
 </div>
 </html>
