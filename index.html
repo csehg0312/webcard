@@ -288,15 +288,19 @@
   <hr>
 
   <div class="container-fluid email_me_theme">
-    <form class="row">
+    <form class="row", action="send_email.php", method="post">
       <h3>In case of questions write an email: </h3>
       <div class="col-md-2">
-        <label> Your email address: </label> <input id="in-mail", accept="ok", required>
-        <label>Your name: </label> <input id="in-name", accept="ok", required>
+        <label> Your email address: </label> <input id="in-mail", type="email", name="email", required>
+        <label>Your name: </label> <input type="text" name="name", required>
+        <label>The subject: </label> <input type="text", name="subject"><br>
+        
       </div>
       <div class="col">
-        <label> Your message comes here: </label><br><textarea class="aria-multiline" aria-multiline="true", rows="15", cols="100" onfocus="", title="Message", required></textarea>
-        <!-- <button onclick="calcscreen();">Get screen size</button> -->
+        <label> Your message comes here: </label><br><textarea class="aria-multiline" aria-multiline="true", rows="15", cols="100", name="message" title="Message", required></textarea>
+      </div>
+      <div class="col">
+        <button type="submit", name="send">Send it</button>
       </div>
 
     </form>
