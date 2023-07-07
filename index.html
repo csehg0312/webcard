@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   <title>WebCard - Welcome to my site</title>
 
   <!-- imports are happening here -->
@@ -19,13 +20,14 @@
 
   <!-- local defined javascript here -->
   <script src="controls.js"></script>
+  <script src="popup.js" defer></script>
   <!-- local theme css file -->
   <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
+    <div class="container-fluid">
       <a class="navbar-brand" href="#welcome">WebCard</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -97,8 +99,8 @@
             <p class="card-text">-----------------------------</p>
             <ul class="list-group list-group-flush">
               <li class="list-group-item"><strong>Email: </strong> <a href="mailto:csehgabor450@gmail.com">csehgabor450@gmail.com</a></li>
-              <li class="list-group-item"><strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/dailywithhuncseh-gabor0312">Profile</a></li>
-              <li class="list-group-item"><strong>GitHub: </strong><a href="https://www.github.com/csehg0312">Profile</a></li>
+              <li class="list-group-item"><strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/dailywithhuncseh-gabor0312", target="_blank">Profile</a></li>
+              <li class="list-group-item"><strong>GitHub: </strong><a href="https://www.github.com/csehg0312", target="_blank">Profile</a></li>
               <!-- <li class="list-group-item"><strong>Facebook: </strong></li> -->
               <!-- <li class="list-group-item"><strong></strong></li>
               <li class="list-group-item"><strong></strong></li> -->
@@ -209,7 +211,26 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
 
           <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
-
+          <p>If you want to try out, you can Download the actual version: <button class="btn btn-success", type="button", data-toggle="collapse", data-target="#stepstoDownload", aria-expanded="false", aria-controls="stepstoDownload">Download from Github repository the zip file</button></p>
+          <div class="collapse", id="stepstoDownload">
+            <div class="card card-body">
+              <button type="submit" data-toggle="modal", data-target="#ste01open"><img src="https://www.dropbox.com/scl/fi/ii58y0r31ukk7li1wtkfe/step01.png?rlkey=of020ywxsxsm7cpzg9lec4p68&raw=1", alt="Step01 - Go on Code green button", width="500vh"></button>
+              <div class="modal fade", id="step01open", tabindex="-1", role="img", aria-labelledby="ste01open", aria-hidden="true">
+                <div class="modal-img">
+                  <div class="modal-content">
+                    <div class="card card-body">
+                      <img src="https://www.dropbox.com/scl/fi/ii58y0r31ukk7li1wtkfe/step01.png?rlkey=of020ywxsxsm7cpzg9lec4p68&raw=1", alt="Step01 - Go on Code green button">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p></p>
+              <img src="https://www.dropbox.com/scl/fi/o14r8riet17kx2saergu3/step02.png?rlkey=f7fkiyrlvzhrlixxd9ci5ozxj&raw=1", alt="Step02 - On this section go to Download Zip", width="500vh">
+              <p></p>
+              <img src="https://www.dropbox.com/scl/fi/qpxl1ks6dpywjn5cx0m3a/step03.png?rlkey=31n4yat30jerzxh01pop87tq9&raw=1", alt="Step03 - About installing you can read in README.md file", width="500vh">
+            </div>
+          </div>
+          </p>
           <hr>
         <h3 id="exptracker">Expense tracker</h3>
 
@@ -223,19 +244,19 @@
   <div class="container-fluid">
     <hr>
     <h1 id="connects">Connections</h1>
-      <div class="col-md text-black">
+      <div class="col text-black">
           <br>
           <h3>JóMóD</h3>
           <div class="container-fluid">
             <div class="row">
-              <div class="col-md">
+              <div class="col">
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
 
                 <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
                 <img src="https://www.dropbox.com/scl/fi/ac07gvoe7ojypynwhjd7j/K-perny-k-p-2021-08-05-131244.jpg?rlkey=5sk5v691gschgbwp8b1u2u253&raw=1", width="100vh", class="rounded-circle">
               </div>
-              <div class="col-md">
+              <div class="col d-flex justify-content-left">
                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjomod.komarom%2Fposts%2Fpfbid0BpotyK5GeindoKGNyK9ybZy5oFWL4sVAtTyjEruBsA2DvjzJp9Cgs2A2BDz63FMZl&show_text=true&width=500" width="500" height="633" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
               </div>
             </div>
@@ -244,19 +265,19 @@
         </div>
         <!-- -------------- -->
         <div class="row">
-          <div class="col-md text-black">
+          <div class="col text-black">
             <br>
             <hr>
             <h3>Diákhálózat</h3> 
             <div class="container-fluid">
               <div class="row">
-                <div class="col-md">
+                <div class="col">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
 
                   <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
                   <img src="https://www.dropbox.com/scl/fi/mmnfatjvle0ea2kotnhw8/dh2021_30yearsSpec.jpg?rlkey=6g8yhyvnv74kdexgghq2nb5x7&raw=1" , width="100vh", class="rounded-circle">
                 </div>
-                <div class="col-md">
+                <div class="col d-flex justify-content-left">
                   <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdiakhalozat%2Fposts%2Fpfbid0bsXpCpS8hGdpx7bwcdQdUBeee2mHXRbhj8QRCK3YuPWenH77P7DprYzyGRp4wmySl&show_text=true&width=500" width="500" height="701" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
               </div>
@@ -316,22 +337,22 @@
   <div class="d-flex justify-content-center">
     <div class="row">
       <div class="col">
-        <a href="https://www.facebook.com/gabor.cseh.147", style="color: white; text-decoration: none;">
+        <a href="https://www.facebook.com/gabor.cseh.147", style="color: white; text-decoration: none;", target="_blank">
           <p>Facebook</p>
         </a>
       </div>
       <div class="col">
-        <a href="https://www.linkedin.com//in/dailywithhuncseh-gabor0312", style="color: white; text-decoration: none;">
+        <a href="https://www.linkedin.com//in/dailywithhuncseh-gabor0312", style="color: white; text-decoration: none;", target="_blank">
           <p>LinkedIn</p>
         </a>
       </div>
       <div class="col">
-        <a href="https://sk.pinterest.com/csehgabor451/", style="color: white; text-decoration: none;">
+        <a href="https://sk.pinterest.com/csehgabor451/", style="color: white; text-decoration: none;", target="_blank">
           <p>Pinterest</p>
         </a>
       </div>
       <div class="col">
-        <a href="https://twitter.com/csehgabor451", style="color: white; text-decoration: none;">
+        <a href="https://twitter.com/csehgabor451", style="color: white; text-decoration: none;", target="_blank">
           <p>Twitter</p>
         </a>
       </div>
@@ -343,7 +364,7 @@
   <div class="d-flex justify-content-center">
     <div class="row">
       <div class="col"><img  id="qr-place",src="", alt="", width="200vh"></div>
-      <script src="popup.js" defer></script>
+      <!-- <script src="popup.js" defer></script> -->
     </div>
   </div>
 </div>
