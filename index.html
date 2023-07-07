@@ -63,7 +63,7 @@
             <a class="dropdown-item" href="#volunters">Volunteerings</a>
           </div>
         </li>
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Change language</a>
             <div class="dropdown-menu", aria-labelledby="navbarDropdownMenuLink">
@@ -73,7 +73,7 @@
               <button class="dropdown-item", onclick="changeToHI();">HI</button>
             </div>
 
-        </li>
+        </li> -->
 
           <!-- <li class="nav-item">
             <a class="nav-link" href="#gallery">Gallery</a>
@@ -287,26 +287,64 @@
 
   <hr>
 
-  <div class="container-fluid email_me_theme">
-    <form class="row", action="send_email.php", method="post">
-      <h3>In case of questions write an email: </h3>
-      <div class="col-md-2">
-        <label> Your email address: </label> <input id="in-mail", type="email", name="email", required>
-        <label>Your name: </label> <input type="text" name="name", required>
-        <label>The subject: </label> <input type="text", name="subject"><br>
-        
-      </div>
-      <div class="col">
-        <label> Your message comes here: </label><br><textarea class="aria-multiline" aria-multiline="true", rows="15", cols="100", name="message" title="Message", required></textarea>
-      </div>
-      <div class="col">
-        <button type="submit", name="send">Send it</button>
-      </div>
-
-    </form>
-  </div>
-</body>
-<div class="container-fluid social_board">
   
+</body>
+
+<div class="container-fluid social_board">
+  <div class="row">
+    <div class="d-flex justify-content-center"><h3>Social Board</h3></div>
+  </div>
+    <div class="d-flex justify-content-center">
+      <div class="row">
+        <div class="col ">
+          <button class="btn text-white" id="fb-btn", onclick="openPopup('https://www.facebook.com/gabor.cseh.147');"> <img src="https://www.dropbox.com/scl/fi/m7fbjsp53ai9sb554ymr5/facebook01.png?rlkey=72kolv6x4zp2qwk0v632juprs&raw=1", width="50vh"> </button>
+        </div>
+        <div class="col ">
+          <button class="btn text-white", id="li-btn", onclick="openPopup('https://www.linkedin.com//in/dailywithhuncseh-gabor0312');"> <img src="https://www.dropbox.com/scl/fi/bmi4ucxn2ouxqnlzvzwri/linkedin01.png?rlkey=s1wtr9rgg9sb5d8c86rdeh8ig&raw=1", width="50vh"> </button>
+        </div>
+        <div class="col ">
+          <button class="btn text-white", id="pi-btn", onclick="openPopup('https://sk.pinterest.com/csehgabor451/');"> <img src="https://www.dropbox.com/scl/fi/z10g70o2g4dvht7dzq6e3/pinterest01.png?rlkey=yb0v92j6pd2vhvtch1sezufj0&raw=1", width="50vh"> </button>
+        </div>
+        <div class="col ">
+          <button class="btn text-white", id="tw-btn", onclick="openPopup('https://twitter.com/csehgabor451');"> <img src="https://www.dropbox.com/scl/fi/9kf3ri6je36lxbsgs19lz/twitter01.png?rlkey=3f0x0549kf5i113a16fb4v2tf&raw=1", width="50vh"> </button>
+        </div>
+        <div class="col ">
+          <button class="btn text-white", id="wh-btn", onclick="openPopup('+421917151235');"> <img src="https://www.dropbox.com/scl/fi/htzz88htppoz0d0lwv0nq/whatsapp01.png?rlkey=3xffyzjbtvdgpnqptmiiuzrov&raw=1", width="50vh"> </button>
+        </div>
+      </div>
+    </div>
+  <div class="d-flex justify-content-center">
+    <div class="row">
+      <div class="col">
+        <a href="https://www.facebook.com/gabor.cseh.147", style="color: white; text-decoration: none;">
+          <p>Facebook</p>
+        </a>
+      </div>
+      <div class="col">
+        <a href="https://www.linkedin.com//in/dailywithhuncseh-gabor0312", style="color: white; text-decoration: none;">
+          <p>LinkedIn</p>
+        </a>
+      </div>
+      <div class="col">
+        <a href="https://sk.pinterest.com/csehgabor451/", style="color: white; text-decoration: none;">
+          <p>Pinterest</p>
+        </a>
+      </div>
+      <div class="col">
+        <a href="https://twitter.com/csehgabor451", style="color: white; text-decoration: none;">
+          <p>Twitter</p>
+        </a>
+      </div>
+      <div class="col">
+        <p>Whatsapp</p>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="row">
+      <div class="col"><img  id="qr-place",src="", alt="", width="200vh"></div>
+      <script src="popup.js" defer></script>
+    </div>
+  </div>
 </div>
 </html>
