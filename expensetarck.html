@@ -21,9 +21,9 @@
                     <input id="inputAccount", type="number" value="">
                     <button id="Acc", class="btn btn-success", type="submit", onclick="account_add();">Add</button>
                     <br>
-                    <div id="AlertPlaceHolder">
+                    <!-- <div id="AlertPlaceHolder">
 
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col">
                     <label>Current balance: </label><h3 id="balanceAcc"></h3><br>
@@ -32,10 +32,15 @@
                 <div class="col">
                     <label>Savings account income</label><br>
                     <input id="inputSaving", type="number", value="">
-                    <button id="savAcc", class="btn btn-success", type="submit">Add</button>
+                    <button id="savAcc", class="btn btn-success", type="submit", onclick="to_saving();">Add</button>
                 </div>
                 <div class="col">
                     <label>Current balance: </label><h3 id="balanceSavAcc"></h3>
+                </div>
+                <div class="col-">
+                    <div id="AlertPlaceHolder">
+
+                    </div>
                 </div>
             </div>
         </div>

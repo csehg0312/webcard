@@ -20,6 +20,9 @@ function alert(message, type) {
 const Account = {
   balance: 0,
   // add: this.balance = (money) => this.balance + money,
+  /**
+   * @param {number} money
+   */
   set add(money) {
     this.balance = this.balance + money;
   }
@@ -34,21 +37,11 @@ const SavingAcc = {
   set add(money) {
     this.balance = this.balance + money;
   },
-  
-  set clearAcc(att) {
-    this.balance = att;
-  }
   // reduce: this.balance = (money) => this.balance - money,
 }
 
 document.getElementById("balanceAcc").innerHTML = Account.balance;
 document.getElementById("balanceSavAcc").innerHTML = SavingAcc.balance;
-
-// AccButton = document.getElementById("Acc");
-// SavAccbButton = document.getElementById("savAcc");
-
-// AccButton.addEventListener('click', hello);
-// SavAccbButton.addEventListener('click', hello);
 
 function clearIt(){
   Account.clearAcc = 0;
@@ -56,15 +49,35 @@ function clearIt(){
 }
 
 function account_add(){
-  // let outputText = document.getElementById("balanceAcc");
   let inputAccount = document.getElementById("inputAccount");
 
-  let input = parseInt(inputAccount.value);
-  if (isNaN(input)){
-    alert('Just used bad type of data.\nRather use numbers.', 'danger');
+  const inputincome = parseInt(inputAccount.value);
+  if (isNaN(inputincome)){
+    alert('Just used bad type of data.\nRather use numbers.', 'info');
+    inputAccount.value = "";
   }else{
-    Account.add = input;
+    Account.add = inputincome;
     // console.log(Account.balance);
     document.getElementById("balanceAcc").innerHTML = Account.balance;
   }
+}
+
+function to_saving(){
+  let inputsaving = document.getElementById("inputSaving");
+  const inputmovetosave = parseInt(inputsaving.value);
+  if(isNaN(inputmovetosave)) {
+    alert('Just used bad type of data.\nRather use numbers.', 'info');
+    inputsaving.value = "";
+  }else{
+    if (Account.balance <= inputmovetosave){
+      alert('Not enough money to transfer to savings. \n Rather move less to savings.', 'info');
+    }else{
+      Account.add = -Math.abs(inputmovetosave);
+      // console.log(inputmovetosave);
+      SavingAcc.add = inputmovetosave;
+    }
+    document.getElementById("balanceAcc").innerHTML = Account.balance;
+    document.getElementById("balanceSavAcc").innerHTML = Account.balance;
+  }
+
 }
