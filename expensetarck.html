@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <title>Private expense tracker</title>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <label>Account income</label><br>
+                    <input id="inputAccount", type="number" value="">
+                    <button id="Acc", class="btn btn-success", type="submit", onclick="account_add();">Add</button>
+                    <br>
+                    <div id="AlertPlaceHolder">
+
+                    </div>
+                </div>
+                <div class="col">
+                    <label>Current balance: </label><h3 id="balanceAcc"></h3><br>
+                    <!-- <button class="btn btn-danger" type="submit", onclick="clearIt();">Clear all data</button> -->
+                </div>
+                <div class="col">
+                    <label>Savings account income</label><br>
+                    <input id="inputSaving", type="number", value="">
+                    <button id="savAcc", class="btn btn-success", type="submit">Add</button>
+                </div>
+                <div class="col">
+                    <label>Current balance: </label><h3 id="balanceSavAcc"></h3>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="popup.js"></script>
+</html>
