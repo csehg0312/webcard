@@ -30,6 +30,24 @@ const Account = {
 
 }
 
+const MoneyHistory = {
+  date: new Date(Date.now()),
+  currbalance: 0,
+  set current(money) {
+    this.currbalance = money;
+  },
+  generatediv: function generate(id){
+    rowDiv = document.createElement("div");
+    colDiv = document.createElement("div");
+    rowDiv.className = "row";
+    colDiv.className = "col";
+    rowDiv.appendChild(colDiv);
+    colDiv.innerHTML = this.currbalance + "\nEUR \n" + this.date;
+    document.getElementById(id).appendChild(rowDiv);
+    this.currbalance = 0;
+  },
+}
+
 const SavingAcc = {
   balance: 0,
   type: "",
@@ -48,6 +66,12 @@ function clearIt(){
   document.getElementById("balanceAcc").innerHTML = Account.balance;
 }
 
+function createDiv(typeofdiv){
+  var newDiv = document.createElement("div");
+  newDiv.className = typeofdiv;
+  return newDiv;
+}
+
 function account_add(){
   let inputAccount = document.getElementById("inputAccount");
 
@@ -58,6 +82,13 @@ function account_add(){
   }else{
     Account.add = inputincome;
     // console.log(Account.balance);
+    if (document.getElementById("AccIsNull")){
+      document.getElementById("AccIsNull").remove();
+    }
+    MoneyHistory.current = inputincome;
+    MoneyHistory.generatediv("accountContainer");
+    // console.log(newDiv);
+    // accContains = document.getElementById("accountContainer").appendChild(newDiv);
     
   }
   document.getElementById("balanceAcc").innerHTML = Account.balance;
@@ -76,6 +107,11 @@ function to_saving(){
       Account.add = -Math.abs(inputmovetosave);
       // console.log(inputmovetosave);
       SavingAcc.add = inputmovetosave;
+      if (document.getElementById("SavIsNull")){
+        document.getElementById("SavIsNull").remove();
+      }
+      MoneyHistory.current = inputmovetosave;
+      MoneyHistory.generatediv("savingContainer");
     }
     document.getElementById("balanceAcc").innerHTML = Account.balance;
     document.getElementById("balanceSavAcc").innerHTML = SavingAcc.balance;
