@@ -24,7 +24,7 @@ const Account = {
    * @param {number} money
    */
   set add(money) {
-    this.balance = this.balance + money;
+    this.balance += money;
   }
   // reduce: this.balance = (money) => this.balance - money,
 
@@ -35,7 +35,7 @@ const SavingAcc = {
   type: "",
   // add: this.balance = (money) => this.balance + money,
   set add(money) {
-    this.balance = this.balance + money;
+    this.balance += money;
   },
   // reduce: this.balance = (money) => this.balance - money,
 }
@@ -58,8 +58,9 @@ function account_add(){
   }else{
     Account.add = inputincome;
     // console.log(Account.balance);
-    document.getElementById("balanceAcc").innerHTML = Account.balance;
+    
   }
+  document.getElementById("balanceAcc").innerHTML = Account.balance;
 }
 
 function to_saving(){
@@ -69,7 +70,7 @@ function to_saving(){
     alert('Just used bad type of data.\nRather use numbers.', 'info');
     inputsaving.value = "";
   }else{
-    if (Account.balance <= inputmovetosave){
+    if (Account.balance < inputmovetosave){
       alert('Not enough money to transfer to savings. \n Rather move less to savings.', 'info');
     }else{
       Account.add = -Math.abs(inputmovetosave);
@@ -77,7 +78,7 @@ function to_saving(){
       SavingAcc.add = inputmovetosave;
     }
     document.getElementById("balanceAcc").innerHTML = Account.balance;
-    document.getElementById("balanceSavAcc").innerHTML = Account.balance;
+    document.getElementById("balanceSavAcc").innerHTML = SavingAcc.balance;
   }
 
 }
