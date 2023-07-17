@@ -1,374 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  <title>WebCard - Welcome to my site</title>
-
-  <!-- imports are happening here -->
-  <!-- bootstrap import -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-  <!-- pyscript import here -->
-  <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-  <script defer src="https://pyscript.net/latest/pyscript.js"></script>  -->
-
-  <!-- local defined javascript here -->
-  <script src="controls.js"></script>
-  <script src="popup.js" defer></script>
-  <!-- local theme css file -->
-  <link rel="stylesheet" href="style.css">
-
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#welcome">WebCard</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">Skills</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#langs">Languages</a>
-              <a class="dropdown-item" href="#progs">Programming</a>
-              <a class="dropdown-item" href="#">xy</a>
-            </div>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">Projects</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#pyfmanager">PyFileManager</a>
-              <a class="dropdown-item" href="#exptracker">Expense tracker</a>
-              <a class="dropdown-item" href="#">xy</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">Connections</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#connects">Connections</a>
-            <a class="dropdown-item" href="#volunters">Volunteerings</a>
-          </div>
-        </li>
-        <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">Change language</a>
-            <div class="dropdown-menu", aria-labelledby="navbarDropdownMenuLink">
-              <button class="dropdown-item", onclick="changeToEN();">EN</button>
-              <button class="dropdown-item", onclick="changeToHU();">HU</button>
-              <button class="dropdown-item", onclick="changeToSK();">SK</button>
-              <button class="dropdown-item", onclick="changeToHI();">HI</button>
-            </div>
-
-        </li> -->
-
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#gallery">Gallery</a>
-          </li> -->
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=0">
+    <meta content="">
+    <title>WebCard - Welcome to my site</title>
     
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <!-- imports are happening here -->
+    <!-- bootstrap import -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- local defined javascript here -->
+    <script src="controls.js"></script>
+    <script src="app.js" defer></script>
 
-  <div class="container mt-4"> 
-    <div class="row">
-      <div class="col-md-8">
-        <h1 id="welcome">Welcome to WebCard</h1>
-        <q>My quote can come here</q>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Contact Information </h5>
-            <p class="card-text">-----------------------------</p>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><strong>Email: </strong> <a href="mailto:csehgabor450@gmail.com">csehgabor450@gmail.com</a></li>
-              <li class="list-group-item"><strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/dailywithhuncseh-gabor0312", target="_blank">Profile</a></li>
-              <li class="list-group-item"><strong>GitHub: </strong><a href="https://www.github.com/csehg0312", target="_blank">Profile</a></li>
-              <li class="list-group-item"><strong>Phone:</strong> +421 917 151 235</li>
-              <div class="container">
-                <div class="row">
-                    <div class="col-md text-end" >
-                        <img alt="Profile picture", src="https://www.dropbox.com/scl/fi/rqaba8rysdwg7cz4hgokb/prof.jpg?rlkey=ncfsstrmpx3hohr9qvl2g6513&raw=1", height="200vh">
+    <!-- local theme css file -->
+    <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#welcome">WebCard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Skills</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#langs">Languages</a>
+                    <a class="dropdown-item" href="#progs">Programming</a>
+                    <a class="dropdown-item" href="#">xy</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Projects</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#pyfmanager">PyFileManager</a>
+                    <a class="dropdown-item" href="#exptracker">Expense tracker</a>
+                    <a class="dropdown-item" href="#">xy</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Connections</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#connects">Connections</a>
+                <a class="dropdown-item" href="#volunters">Volunteerings</a>
+            </div>
+            </li>
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Change language</a>
+                <div class="dropdown-menu", aria-labelledby="navbarDropdownMenuLink">
+                <button class="dropdown-item", onclick="changeToEN();">EN</button>
+                <button class="dropdown-item", onclick="changeToHU();">HU</button>
+                <button class="dropdown-item", onclick="changeToSK();">SK</button>
+                <button class="dropdown-item", onclick="changeToHI();">HI</button>
+                </div>
+
+            </li> -->
+
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="#gallery">Gallery</a>
+            </li> -->
+        
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4"> 
+        <div class="row">
+        <div class="col-md-8">
+            <h1 id="welcome">Welcome to WebCard</h1>
+            <q>My quote can come here</q>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Contact Information </h5>
+                <p class="card-text">-----------------------------</p>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Email: </strong> <a href="mailto:csehgabor450@gmail.com">csehgabor450@gmail.com</a></li>
+                <li class="list-group-item"><strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/dailywithhuncseh-gabor0312", target="_blank">Profile</a></li>
+                <li class="list-group-item"><strong>GitHub: </strong><a href="https://www.github.com/csehg0312", target="_blank">Profile</a></li>
+                <li class="list-group-item"><strong>Phone:</strong> +421 917 151 235</li>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md text-end" >
+                            <img alt="Profile picture", src="https://www.dropbox.com/scl/fi/rqaba8rysdwg7cz4hgokb/prof.jpg?rlkey=ncfsstrmpx3hohr9qvl2g6513&raw=1", height="200vh">
+                        </div>
                     </div>
                 </div>
-              </div>
-            </ul>
-          </div>
+                </ul>
+            </div>
+            </div>
+
         </div>
 
-      </div>
+        </div>
+        
+    </div>
+    <div class="container-fluid about_theme">
+        <hr>
+        <div class="row">
+            <div class="col-md-8">
+                <h1 id="about">About</h1>
+                <div class="container mt-4">
+                    
 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt ipsum vitae libero pretium, auctor accumsan urna imperdiet. Quisque purus sapien, vulputate a lectus non, vehicula dictum nunc. Sed ac ante sit amet libero lobortis blandit nec eu nisi. Pellentesque ornare mi quis nisl consequat, id pharetra arcu accumsan. Pellentesque cursus tortor nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam iaculis eros ac neque lacinia molestie. Curabitur iaculis lorem non fermentum posuere. Duis non purus eget velit hendrerit fringilla nec eu felis. Curabitur ullamcorper felis ut lacus sodales volutpat. Sed ut gravida diam, in efficitur sapien. Donec ac porta nibh.</p>
+
+                <p>Praesent sit amet sodales enim. Integer lobortis semper aliquam. Maecenas dui quam, porttitor id dapibus sit amet, blandit ut libero. Vestibulum pulvinar scelerisque ligula, sed dictum velit suscipit id. Sed ac cursus dui, vel sagittis neque. Mauris viverra dui diam, a eleifend elit fermentum congue. Sed posuere vehicula metus, vel auctor ipsum vestibulum in.</p>
+
+                <p>Suspendisse cursus molestie vulputate. Suspendisse bibendum turpis sed diam pellentesque, vel convallis magna dictum. Cras eget felis finibus, semper libero id, laoreet neque. Nam ultrices nulla id tortor rutrum finibus. Vestibulum blandit ante sed ullamcorper facilisis. Mauris interdum blandit orci vulputate fringilla. Vivamus pellentesque aliquam nulla vitae convallis.</p>
+
+                <p>Quisque mollis vitae est eget porttitor. Praesent ultricies sapien sed erat congue placerat. Curabitur rutrum diam eu mauris venenatis fermentum. Aenean eget auctor ex. Aliquam eu massa interdum, vehicula est et, bibendum neque. In hac habitasse platea dictumst. Ut cursus, quam ac consectetur aliquet, nulla justo pharetra sem, sit amet volutpat massa augue eu nisi. Nullam sit amet hendrerit massa, ut tristique diam.</p>
+
+                <p>Sed arcu orci, vehicula ac dictum sit amet, porttitor id tellus. Sed scelerisque in magna vel rhoncus. Donec porta lacinia magna. Curabitur interdum at orci sed pharetra. Aliquam auctor eleifend lorem eleifend iaculis. Mauris ullamcorper tempor dui, in facilisis libero sodales in. Fusce semper mi id ultricies euismod. Integer ut tortor posuere, tempor felis sed, auctor leo. Proin ornare felis justo, sed suscipit lorem volutpat in. Praesent tristique mattis lectus a eleifend. Aenean facilisis metus at risus sodales, non cursus magna fermentum. Vestibulum rutrum, lorem vel tincidunt faucibus, sapien turpis porta dolor, ut congue arcu lorem sed dolor. Donec ornare dolor sem, nec suscipit ex congue at. Sed in ligula metus. Vivamus tristique urna posuere, scelerisque quam vel, tempus dui. </p>
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="container-fluid">
+        <h1 id="langs">Languages</h1>
+        <div class="row">
+            <div class="col">
+                <h2>Languages learned:</h2> 
+                <hr>
+                <h4>Hungarian</h4>
+                <div class="progress">
+                    <div class="progress-bar w-100" role="progressbar" aria-valuenow="6" aria-valuemin="0" aria-valuemax="6">C2</div>
+                </div>
+                <br>
+                
+                <h4>Slovak</h4>
+                <div class="progress">
+                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="4", aria-valuemin="0" aria-valuemax="6">B2</div>
+                </div>
+                <br>
+        
+                <h4>English</h4> 
+                <div class="progress">
+                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="6">B2</div>
+                </div>
+                <br>
+                
+                <h4>German</h4> 
+                <div class="progress">
+                    <div class="progress-bar w-25" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="6">A1</div>
+                </div>
+                <br>
+                
+                </div>
+            <div class="col">
+            <h2>Currently learning on Duolingo:</h2>
+            <hr>
+            
+            <p>Norwegian ---- 26 <progress value="26" max="159"></progress> from 159 lessons</p>
+            <br>
+            
+            <p>Ukranian ----  7 <progress value="7" max="33"></progress> from 33 lessons</p>
+            
+            <br>
+            <p>Hindi ---- 6 <progress value="6" max="21"></progress> from 21 lessons</p>
+            <div class="col-md-2">
+                <img src="https://www.dropbox.com/scl/fi/wptvve5lvjtqlbncqbrsf/7564363_duolingo_logo_brand_icon.png?rlkey=8qjzjdk1dj9cn1zw39loscg0n&raw=1" width="100vh">
+            
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
+    
+    <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
+    </div>
+
+    <hr>
+    <div class="container-fluid">
+        <h1 id="progs">Programming Skills</h1>
+        <div class="row">
+        <h3></h3>
+            <div class="col">
+            </div>
+        </div>
     </div>
     
-  </div>
-  <div class="container-fluid about_theme">
     <hr>
-    <div class="row">
-        <div class="col-md-8">
-            <h1 id="about">About</h1>
-            <div class="container mt-4">
-                
-
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt ipsum vitae libero pretium, auctor accumsan urna imperdiet. Quisque purus sapien, vulputate a lectus non, vehicula dictum nunc. Sed ac ante sit amet libero lobortis blandit nec eu nisi. Pellentesque ornare mi quis nisl consequat, id pharetra arcu accumsan. Pellentesque cursus tortor nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam iaculis eros ac neque lacinia molestie. Curabitur iaculis lorem non fermentum posuere. Duis non purus eget velit hendrerit fringilla nec eu felis. Curabitur ullamcorper felis ut lacus sodales volutpat. Sed ut gravida diam, in efficitur sapien. Donec ac porta nibh.</p>
-
-              <p>Praesent sit amet sodales enim. Integer lobortis semper aliquam. Maecenas dui quam, porttitor id dapibus sit amet, blandit ut libero. Vestibulum pulvinar scelerisque ligula, sed dictum velit suscipit id. Sed ac cursus dui, vel sagittis neque. Mauris viverra dui diam, a eleifend elit fermentum congue. Sed posuere vehicula metus, vel auctor ipsum vestibulum in.</p>
-
-              <p>Suspendisse cursus molestie vulputate. Suspendisse bibendum turpis sed diam pellentesque, vel convallis magna dictum. Cras eget felis finibus, semper libero id, laoreet neque. Nam ultrices nulla id tortor rutrum finibus. Vestibulum blandit ante sed ullamcorper facilisis. Mauris interdum blandit orci vulputate fringilla. Vivamus pellentesque aliquam nulla vitae convallis.</p>
-
-              <p>Quisque mollis vitae est eget porttitor. Praesent ultricies sapien sed erat congue placerat. Curabitur rutrum diam eu mauris venenatis fermentum. Aenean eget auctor ex. Aliquam eu massa interdum, vehicula est et, bibendum neque. In hac habitasse platea dictumst. Ut cursus, quam ac consectetur aliquet, nulla justo pharetra sem, sit amet volutpat massa augue eu nisi. Nullam sit amet hendrerit massa, ut tristique diam.</p>
-
-              <p>Sed arcu orci, vehicula ac dictum sit amet, porttitor id tellus. Sed scelerisque in magna vel rhoncus. Donec porta lacinia magna. Curabitur interdum at orci sed pharetra. Aliquam auctor eleifend lorem eleifend iaculis. Mauris ullamcorper tempor dui, in facilisis libero sodales in. Fusce semper mi id ultricies euismod. Integer ut tortor posuere, tempor felis sed, auctor leo. Proin ornare felis justo, sed suscipit lorem volutpat in. Praesent tristique mattis lectus a eleifend. Aenean facilisis metus at risus sodales, non cursus magna fermentum. Vestibulum rutrum, lorem vel tincidunt faucibus, sapien turpis porta dolor, ut congue arcu lorem sed dolor. Donec ornare dolor sem, nec suscipit ex congue at. Sed in ligula metus. Vivamus tristique urna posuere, scelerisque quam vel, tempus dui. </p>
-                ...
-            </div>
-        </div>
-    </div>
-  </div>
-
-  <hr>
-  <div class="container-fluid">
-    <h1 id="langs">Languages</h1>
-    <div class="row">
-        <div class="col">
-          <h3>Languages learned: </h3>
-       
-          Hungarian ---- A1 <progress value="6" max="6"></progress> C1
-          <p>C2 - Fluent</p>
-          <br>
-        
-          Slovak ---- A1 <progress value="4" max="6"></progress> C1
-          <p>B2</p>
-          <br>
-  
-          English ---- A1 <progress value="4" max="6"></progress> C1
-          <p>B2</p>
-          <br>
-        
-          German ---- A1 <progress value="1" max="6"></progress> C1
-          <p>A1</p>
-          
-        </div>
-        <div class="col">
-          <h3>Currently learning on Duolingo:</h3>
-      
-          
-          <p>Norwegian ---- 26 <progress value="26" max="159"></progress> from 159 lessons</p>
-          <br>
-          
-          <p>Ukranian ----  7 <progress value="7" max="33"></progress> from 33 lessons</p>
-        
-          <br>
-          <p>Hindi ---- 6 <progress value="6" max="21"></progress> from 21 lessons</p>
-          <div class="col-md-2">
-            <img src="https://www.dropbox.com/scl/fi/wptvve5lvjtqlbncqbrsf/7564363_duolingo_logo_brand_icon.png?rlkey=8qjzjdk1dj9cn1zw39loscg0n&raw=1" width="100vh">
-          
-    </div>
-    </div>
-  </div>
-
-  <hr>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
-  
-  <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
-  </div>
-
-  <hr>
-  <div class="container-fluid">
-    <h1 id="progs">Programming Skills</h1>
-    <div class="row">
-      <h3></h3>
-        <div class="col-md-8">
-        </div>
-    </div>
-  </div>
-  
-  <hr>
-  <div class="container-fluid">
-    <h1 id="projs">Projects</h1>
-    <div class="row">
-      <div class="col">
-        <h3 id="pyfmanager">PyFileManager</h3>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
-
-        <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
-        <p>If you want to try out, you can Download the actual version: 
-          <!-- modal opening button -->
-          <button class="btn btn-success", type="button", data-bs-toggle="modal", data-bs-target="#stepstoDownload">Download from Github repository the zip file</button>
-        </p>
-      </div>
-    </div>
-    <!-- modal comes here -->
-    <div class="modal fade", id="stepstoDownload", tabindex="-1", aria-labelledby="modal-title", aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title", id="modal-title">Steps to Download PyFileManager from Github</h3>
-            <button type="button", class="btn-close", data-bs-dismiss="modal", aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores vero unde quos, atque eum consequuntur. Numquam natus nam ipsam cupiditate repudiandae! Illum mollitia, quibusdam rem neque explicabo assumenda quo quaerat.</p>
-                <img class="stepsto", src="https://www.dropbox.com/scl/fi/ii58y0r31ukk7li1wtkfe/step01.png?rlkey=of020ywxsxsm7cpzg9lec4p68&raw=1">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta qui illo laborum facere repellat odit accusamus dolorum debitis libero dolor fugit, provident aspernatur tempore, temporibus in numquam. Incidunt, earum quam!</p>
-                <img class="stepsto", src="https://www.dropbox.com/scl/fi/o14r8riet17kx2saergu3/step02.png?rlkey=f7fkiyrlvzhrlixxd9ci5ozxj&raw=1">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur iste quo sequi atque voluptates nisi perspiciatis. Quo odio placeat molestias. Sit culpa aperiam quo corrupti fugit recusandae. Deserunt, suscipit nam!</p>
-                <img class="stepsto", src="https://www.dropbox.com/scl/fi/qpxl1ks6dpywjn5cx0m3a/step03.png?rlkey=31n4yat30jerzxh01pop87tq9&raw=1">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatum nisi sequi perferendis eum officia totam facere, veniam aperiam magni culpa dolores quisquam quaerat ad quod, nesciunt, soluta placeat. Quaerat.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr>
-        
-    <div class="row">
-      <div class="col">
-        <h3 id="exptracker">Expense tracker</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
-        <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
-      </div>
-      <div class="col">
-        <a href="expensetarck.html", style="color: black; text-decoration: none;", target="_blank" >Currently in construct</a>
-      </div>
-    </div>
-    <!-- end of container -->
-  </div>
-
-  <div class="container-fluid">
-    <hr>
-    <h1 id="connects">Connections</h1>
-      <div class="col text-black">
-          <br>
-          <h3>JóMóD</h3>
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col">
+    <div class="container-fluid">
+        <h1 id="projs">Projects</h1>
+        <div class="row">
+            <div class="col">
+                <h3 id="pyfmanager">PyFileManager</h3>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
 
                 <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
-                <img src="https://www.dropbox.com/scl/fi/ac07gvoe7ojypynwhjd7j/K-perny-k-p-2021-08-05-131244.jpg?rlkey=5sk5v691gschgbwp8b1u2u253&raw=1", width="100vh", class="rounded-circle">
-              </div>
-              <div class="col d-flex justify-content-left">
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjomod.komarom%2Fposts%2Fpfbid0BpotyK5GeindoKGNyK9ybZy5oFWL4sVAtTyjEruBsA2DvjzJp9Cgs2A2BDz63FMZl&show_text=true&width=500" width="500" height="633" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-              </div>
+                <p>If you want to try out, you can Download the actual version: 
+                <!-- modal opening button -->
+                <button class="btn btn-success", type="button", data-bs-toggle="modal", data-bs-target="#stepstoDownload">Download from Github repository the zip file</button>
+                </p>
             </div>
-            
-          </div>
         </div>
-        <!-- -------------- -->
-        <div class="row">
-          <div class="col text-black">
-            <br>
-            <hr>
-            <h3>Diákhálózat</h3> 
-            <div class="container-fluid">
-              <div class="row">
+        <!-- modal comes here -->
+        <div class="modal fade", id="stepstoDownload", tabindex="-1", aria-labelledby="modal-title", aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title", id="modal-title">Steps to Download PyFileManager from Github</h3>
+                <button type="button", class="btn-close", data-bs-dismiss="modal", aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
                 <div class="col">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
-
-                  <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
-                  <img src="https://www.dropbox.com/scl/fi/mmnfatjvle0ea2kotnhw8/dh2021_30yearsSpec.jpg?rlkey=6g8yhyvnv74kdexgghq2nb5x7&raw=1" , width="100vh", class="rounded-circle">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores vero unde quos, atque eum consequuntur. Numquam natus nam ipsam cupiditate repudiandae! Illum mollitia, quibusdam rem neque explicabo assumenda quo quaerat.</p>
+                    <img class="stepsto", src="https://www.dropbox.com/scl/fi/ii58y0r31ukk7li1wtkfe/step01.png?rlkey=of020ywxsxsm7cpzg9lec4p68&raw=1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta qui illo laborum facere repellat odit accusamus dolorum debitis libero dolor fugit, provident aspernatur tempore, temporibus in numquam. Incidunt, earum quam!</p>
+                    <img class="stepsto", src="https://www.dropbox.com/scl/fi/o14r8riet17kx2saergu3/step02.png?rlkey=f7fkiyrlvzhrlixxd9ci5ozxj&raw=1">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur iste quo sequi atque voluptates nisi perspiciatis. Quo odio placeat molestias. Sit culpa aperiam quo corrupti fugit recusandae. Deserunt, suscipit nam!</p>
+                    <img class="stepsto", src="https://www.dropbox.com/scl/fi/qpxl1ks6dpywjn5cx0m3a/step03.png?rlkey=31n4yat30jerzxh01pop87tq9&raw=1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatum nisi sequi perferendis eum officia totam facere, veniam aperiam magni culpa dolores quisquam quaerat ad quod, nesciunt, soluta placeat. Quaerat.</p>
                 </div>
-                <div class="col d-flex justify-content-left">
-                  <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdiakhalozat%2Fposts%2Fpfbid0bsXpCpS8hGdpx7bwcdQdUBeee2mHXRbhj8QRCK3YuPWenH77P7DprYzyGRp4wmySl&show_text=true&width=500" width="500" height="701" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
-              </div>
             </div>
-          </div>
+            </div>
         </div>
-      </div>
+        </div>
+        <hr>
+            
+        <div class="row">
+            <div class="col">
+                <h3 id="exptracker">Expense tracker</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
+                <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
+            </div>
+            <div class="col">
+                <a href="./expensetrack/index.html", style="color: black; text-decoration: none;", target="_blank" >Currently in construct</a>
+            </div>
+        </div>
+        <!-- end of container -->
+    </div>
+
+    <div class="container-fluid">
+        <hr>
+        <h1 id="connects">Connections</h1>
+        <div class="col text-black">
+            <br>
+            <h3>JóMóD</h3>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
+
+                        <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
+                        <img src="https://www.dropbox.com/scl/fi/ac07gvoe7ojypynwhjd7j/K-perny-k-p-2021-08-05-131244.jpg?rlkey=5sk5v691gschgbwp8b1u2u253&raw=1", width="100vh", class="rounded-circle">
+                    </div>
+                    <div class="col d-flex justify-content-left">
+                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjomod.komarom%2Fposts%2Fpfbid0BpotyK5GeindoKGNyK9ybZy5oFWL4sVAtTyjEruBsA2DvjzJp9Cgs2A2BDz63FMZl&show_text=true&width=500" width="500" height="633" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+            <!-- -------------- -->
+            <div class="row">
+            <div class="col text-black">
+                <br>
+                <hr>
+                <h3>Diákhálózat</h3> 
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa consequat, consequat ipsum eget, bibendum lectus. Vivamus bibendum felis nisl, nec varius augue maximus a. Proin ullamcorper tempor maximus. In elementum turpis eros, eu varius dolor elementum quis. Nunc congue lacus purus, et molestie urna consequat vitae. Donec vitae consectetur nisl. Proin ac dictum justo.</p>
+
+                            <p>Nulla posuere ipsum auctor tortor vulputate tempus. Donec dapibus tempor augue et tincidunt. Nam suscipit, arcu cursus pharetra luctus, libero nulla faucibus dolor, et tempus ante magna fringilla purus. Pellentesque quis felis quis lorem convallis mollis. Cras lorem enim, tincidunt id porta non, viverra et dui. Donec porta, tortor id consectetur sodales, urna eros facilisis felis, in molestie odio nulla eu magna. Nulla vel nunc semper, consectetur lectus id, maximus lectus. Mauris eleifend maximus sem quis iaculis. Fusce facilisis eleifend neque id volutpat. Duis dapibus ipsum id diam pharetra, vitae fringilla augue eleifend. Sed eget sem fermentum, dictum nisl in, elementum felis. Praesent facilisis magna condimentum lorem congue fringilla. Phasellus porttitor ac tortor vitae rhoncus. Donec porttitor vulputate nisi ut tincidunt. </p>
+                            <img src="https://www.dropbox.com/scl/fi/mmnfatjvle0ea2kotnhw8/dh2021_30yearsSpec.jpg?rlkey=6g8yhyvnv74kdexgghq2nb5x7&raw=1" , width="100vh", class="rounded-circle">
+                        </div>
+                        <div class="col d-flex justify-content-left">
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdiakhalozat%2Fposts%2Fpfbid0bsXpCpS8hGdpx7bwcdQdUBeee2mHXRbhj8QRCK3YuPWenH77P7DprYzyGRp4wmySl&show_text=true&width=500" width="500" height="701" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
 
 
-  <hr>
-  <div class="container-fluid">
-    <h1 id="volunters">Volunteerings</h1>
-    <div class="row">
-        <div class="col">
-          
+    <hr>
+    <div class="container-fluid">
+        <h1 id="volunters">Volunteerings</h1>
+        <div class="row">
+            <div class="col">
+            
+            </div>
         </div>
     </div>
-  </div>
 
-  <hr>
+    <hr>
 
-  
-</body>
+    
+    </body>
 
-<div class="container-fluid social_board">
-  <div class="row">
-    <div class="d-flex justify-content-center"><h3>Social Board</h3></div>
-  </div>
-    <div class="d-flex justify-content-center">
-      <div class="row">
-        <div class="col ">
-          <button class="btn text-white" id="fb-btn", onclick="openPopup('https://www.facebook.com/gabor.cseh.147');"> <img src="https://www.dropbox.com/scl/fi/m7fbjsp53ai9sb554ymr5/facebook01.png?rlkey=72kolv6x4zp2qwk0v632juprs&raw=1", width="50vh"> </button>
+    <footer>
+        <div class="container-fluid social_board">
+        <div class="row">
+            <div class="d-flex justify-content-center"><h3>Social Board</h3></div>
         </div>
-        <div class="col ">
-          <button class="btn text-white", id="li-btn", onclick="openPopup('https://www.linkedin.com//in/dailywithhuncseh-gabor0312');"> <img src="https://www.dropbox.com/scl/fi/bmi4ucxn2ouxqnlzvzwri/linkedin01.png?rlkey=s1wtr9rgg9sb5d8c86rdeh8ig&raw=1", width="50vh"> </button>
+            <div class="d-flex justify-content-center">
+            <div class="row">
+                <div class="col ">
+                    <button class="btn text-white" id="fb-btn", onclick="openPopup('https://www.facebook.com/gabor.cseh.147');"> <img src="https://www.dropbox.com/scl/fi/m7fbjsp53ai9sb554ymr5/facebook01.png?rlkey=72kolv6x4zp2qwk0v632juprs&raw=1", width="50vh"> </button>
+                </div>
+                <div class="col ">
+                    <button class="btn text-white", id="li-btn", onclick="openPopup('https://www.linkedin.com//in/dailywithhuncseh-gabor0312');"> <img src="https://www.dropbox.com/scl/fi/bmi4ucxn2ouxqnlzvzwri/linkedin01.png?rlkey=s1wtr9rgg9sb5d8c86rdeh8ig&raw=1", width="50vh"> </button>
+                </div>
+                <div class="col ">
+                    <button class="btn text-white", id="pi-btn", onclick="openPopup('https://sk.pinterest.com/csehgabor451/');"> <img src="https://www.dropbox.com/scl/fi/z10g70o2g4dvht7dzq6e3/pinterest01.png?rlkey=yb0v92j6pd2vhvtch1sezufj0&raw=1", width="50vh"> </button>
+                </div>
+                <div class="col ">
+                    <button class="btn text-white", id="tw-btn", onclick="openPopup('https://twitter.com/csehgabor451');"> <img src="https://www.dropbox.com/scl/fi/9kf3ri6je36lxbsgs19lz/twitter01.png?rlkey=3f0x0549kf5i113a16fb4v2tf&raw=1", width="50vh"> </button>
+                </div>
+                <div class="col ">
+                    <button class="btn text-white", id="wh-btn", onclick="openPopup('+421917151235');"> <img src="https://www.dropbox.com/scl/fi/htzz88htppoz0d0lwv0nq/whatsapp01.png?rlkey=3xffyzjbtvdgpnqptmiiuzrov&raw=1", width="50vh"> </button>
+                </div>
+            </div>
+            </div>
+        <div class="d-flex justify-content-center">
+            <div class="row">
+                <div class="col">
+                    <a href="https://www.facebook.com/gabor.cseh.147", style="color: white; text-decoration: none;", target="_blank">
+                    <p>Facebook</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.linkedin.com//in/dailywithhuncseh-gabor0312", style="color: white; text-decoration: none;", target="_blank">
+                    <p>LinkedIn</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://sk.pinterest.com/csehgabor451/", style="color: white; text-decoration: none;", target="_blank">
+                    <p>Pinterest</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://twitter.com/csehgabor451", style="color: white; text-decoration: none;", target="_blank">
+                    <p>Twitter</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <p>Whatsapp</p>
+                </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="row">
+                    <div class="col"><img  id="qr-place",src="", alt="", width="200vh"></div>
+                </div>
+            </div>
         </div>
-        <div class="col ">
-          <button class="btn text-white", id="pi-btn", onclick="openPopup('https://sk.pinterest.com/csehgabor451/');"> <img src="https://www.dropbox.com/scl/fi/z10g70o2g4dvht7dzq6e3/pinterest01.png?rlkey=yb0v92j6pd2vhvtch1sezufj0&raw=1", width="50vh"> </button>
-        </div>
-        <div class="col ">
-          <button class="btn text-white", id="tw-btn", onclick="openPopup('https://twitter.com/csehgabor451');"> <img src="https://www.dropbox.com/scl/fi/9kf3ri6je36lxbsgs19lz/twitter01.png?rlkey=3f0x0549kf5i113a16fb4v2tf&raw=1", width="50vh"> </button>
-        </div>
-        <div class="col ">
-          <button class="btn text-white", id="wh-btn", onclick="openPopup('+421917151235');"> <img src="https://www.dropbox.com/scl/fi/htzz88htppoz0d0lwv0nq/whatsapp01.png?rlkey=3xffyzjbtvdgpnqptmiiuzrov&raw=1", width="50vh"> </button>
-        </div>
-      </div>
-    </div>
-  <div class="d-flex justify-content-center">
-    <div class="row">
-      <div class="col">
-        <a href="https://www.facebook.com/gabor.cseh.147", style="color: white; text-decoration: none;", target="_blank">
-          <p>Facebook</p>
-        </a>
-      </div>
-      <div class="col">
-        <a href="https://www.linkedin.com//in/dailywithhuncseh-gabor0312", style="color: white; text-decoration: none;", target="_blank">
-          <p>LinkedIn</p>
-        </a>
-      </div>
-      <div class="col">
-        <a href="https://sk.pinterest.com/csehgabor451/", style="color: white; text-decoration: none;", target="_blank">
-          <p>Pinterest</p>
-        </a>
-      </div>
-      <div class="col">
-        <a href="https://twitter.com/csehgabor451", style="color: white; text-decoration: none;", target="_blank">
-          <p>Twitter</p>
-        </a>
-      </div>
-      <div class="col">
-        <p>Whatsapp</p>
-      </div>
-    </div>
-  </div>
-  <div class="d-flex justify-content-center">
-    <div class="row">
-      <div class="col"><img  id="qr-place",src="", alt="", width="200vh"></div>
-      <!-- <script src="popup.js" defer></script> -->
-    </div>
-  </div>
-</div>
+    </footer>
 </html>
